@@ -21,11 +21,11 @@ from app import views
 urlpatterns = [
     path('',views.home,name='home'),
     
-    path('register/',views.Sign_up,name='signUp'),
-    path('login/',views.user_login,name='login'),
+     path('register/',views.register_view,name='register'),
+    path('login/',views.login_view,name='login'),
     path('logout/',views.user_logout,name='logout'),
-    path('verify_otp/',views.verify_otp,name='verify_otp'),
-    path('verify_otp_login/',views.verify_otp_login,name='verify_otp_login'),
+    #path('verify_otp/',views.verify_otp,name='verify_otp'),
+    #path('verify_otp_login/',views.verify_otp_login,name='verify_otp_login'),
     path('task_list/', views.task_list, name='task_list'),
     path('create/', views.task_create, name='task_create'),
     path('update/<int:id>/', views.task_update, name='task_update'),
