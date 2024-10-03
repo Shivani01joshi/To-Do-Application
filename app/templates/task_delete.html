@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Task</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete "{{ task.title }}"?</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    <a href="{% url 'task_list' %}" class="btn btn-warning mt-3">Back to List</a>
+</body>
+</html>
+{% endblock content %}
